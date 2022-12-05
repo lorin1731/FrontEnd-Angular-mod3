@@ -4,11 +4,12 @@
 <img src="../../../assets/img/APlogo.png" id="logoAP">
 </div>
 <div class="redes">
-  <i class="fa-brands fa-facebook fa-2xl"></i>
-    <i class="fa-brands fa-github fa-2xl"></i>
+    <i class="fa-brands fa-facebook fa-2xl"></i>
+    <i class="fa-brands fa-github fa-2xl" ></i>
     <i class="fa-brands fa-instagram fa-2xl"></i>
     <i class="fa-brands fa-linkedin fa-2xl"></i>
-    <button type="button" class="btn-outline-ligh" (click)="login()">INGRESO</button>
+    <button type="button" class="btn-outline-ligh" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+    <button type="button" class="btn-outline-ligh" (click)="onLogout()"*ngIf="isLogged" >CERRAR SESSION</button>
 </div>
 </div>
 </div>

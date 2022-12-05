@@ -69,3 +69,14 @@ width: 70%;
     justify-content: center;
     margin-top: 1em;
 }
+
+button{
+    cursor: pointer;
+    color: #f1f4f7;
+    border-radius: 10px;
+    transition: .5s ease;
+    background: transparent;
+    border: 2px solid #f3f5f8;
+    box-shadow: 0 0 10px 0 #f2f4f8 inset;
+    border-radius: 10px;
+}

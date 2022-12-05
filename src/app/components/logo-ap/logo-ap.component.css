@@ -37,3 +37,14 @@ img{
         margin: 0.2em;
     }
 }
+
+button{
+    cursor: pointer;
+    color: #fbc862;
+    border-radius: 10px;
+    transition: .5s ease;
+    background: transparent;
+    border: 2px solid #799be6;
+    box-shadow: 0 0 10px 0 #799be6 inset;
+    border-radius: 10px;
+}
