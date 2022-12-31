@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   nombreUsuario!: string;
   password!: string;
   roles: string[] = [];
-  errMsg!: string;
+  errMsj!: string;
 
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
@@ -42,8 +42,8 @@ onLogin(): void {
   }, err => {
     this.isLogged = false;
     this.isLoggingFail = true;
-    this.errMsg = err.error.mensaje;
-    console.log(this.errMsg);
+    this.errMsj = err.error.mensaje;
+    console.log(this.errMsj);
   })
 }
 
