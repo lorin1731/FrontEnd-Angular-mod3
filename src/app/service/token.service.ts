@@ -17,7 +17,7 @@ roles: Array<string> = [];
   }
 
   public getToken(): string {
-    return sessionStorage.getItem(TOKEN_KEY)!;
+    return sessionStorage.getItem(TOKEN_KEY);
 
   }
 
@@ -27,7 +27,7 @@ roles: Array<string> = [];
   }
 
   public getUserName(): string {
-    return sessionStorage.getItem(USERNAME_KEY)!;
+    return sessionStorage.getItem(USERNAME_KEY);
 
   }
 
@@ -39,7 +39,7 @@ roles: Array<string> = [];
 public getAuthorities(): string[] {
   this.roles = [];
   if(sessionStorage.getItem(AUTHORITIES_KEY)){
-    JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((authority:any) => {
+    JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)).forEach((authority:any) => {
       this.roles.push(authority.authority);
     });
   }

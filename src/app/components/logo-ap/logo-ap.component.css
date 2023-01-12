@@ -5,14 +5,14 @@
 }
 
 .redes{
-    
+    cursor: pointer;
     margin-right: 0.5em;
     color: #fbc862;
 }
 
 
 #logoAP{
-    
+    cursor: pointer;
     width: 150px;
 }
 

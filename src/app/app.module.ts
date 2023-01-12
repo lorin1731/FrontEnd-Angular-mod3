@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,12 +16,16 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { HttpClientModule} from '@angular/common/http';
-import { interceptorProvider } from './service/interceptor-service';
+import { HttpClientModule } from '@angular/common/http';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
 import { EditeducacionComponent } from './components/educacion/editeducacion.component';
+import { PersonaService } from './service/persona-service';
+import { interceptorProvider } from './service/interceptor-service'
+
+
+
 
 @NgModule({
   declarations: [
@@ -30,28 +34,31 @@ import { EditeducacionComponent } from './components/educacion/editeducacion.com
     LogoAPComponent,
     SocialComponent,
     BannerComponent,
-    AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
     HskComponent,
     ProyectoComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent,
     HomeComponent,
+    LoginComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
-    EditeducacionComponent
+    EditeducacionComponent,
+    AcercaDeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    HttpClientModule],
+
+  providers: [PersonaService, interceptorProvider],
+    
+  bootstrap: [AppComponent],
 })
+
 export class AppModule { }
